@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", sans-serif;
+}
+ 
+ p,
+li,
+a,
+label {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  color: var(--para-color);
+  line-height: 1.5;
+}
+
+
+a {
+    text-decoration: none;   /* upar navbar mai home vagara ke neeche line nahi aane ki*/
+  }
+  
+li {
+  list-style: none; /* boolets point chale ja*/
+}
+
+:root {
+    --main-color: #0062ff;
+    --supporting-color: #ebf3fe;
+    --font-color: #424242;
+    --bg-color: #f7fcff;
+    --heading-color: #000a19;
+    --hero-heading-color: #003b99;
+    --white-color: #ffffff;
+    --para-color: #504e4d;
+    --bnt-hover-bg-color: #003b99;
+    --btn-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --footer-bg-color: #040d12;
+  }
+
+.container {
+    max-width: 142rem;
+    margin: 0 auto;
+    padding: 7.rem 2.4rem;
+}
+
+.section-all--avtar .container:first-child {
+    padding:6.4rem 0 2.4rem 0;   /*extra gap aja ga 3rd wale mai*/
+}
+
+.grid {
+    display: grid;
+}
+.grid-two--cols {
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+.grid-three--cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+.grid-four--cols {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.section-common-heading {
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.section-common-subheading {
+    color: var(--heading-color)
+}
+
+.section-common--title {
+    font-size: 2rem;
+    margin: 2.4rem 0 1.2rem 0;
+}
+
+.btn{
+    display: inline-block; /*why we use inline-block (padding top right use ni krta inline element maiisi liye we use inline-block)*/
+    padding: 1.2rem 3.2rem;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border-radius: 0.6rem;
+}
+
+.btn:hover {
+   background-color: var(--bnt-hover-bg-color);
+   cursor: pointer;
+   box-shadow: var(--btn-box-shadow);
+}
+
+
+.section-navbar {
+    width: 100%;
+    display: flex;
+    justify-content:center; /*logo thoda center mai hota h*/
+    align-items: center;
+    box-shadow: rgba(231, 208, 208, 0.5) 0px 6px 24px 0px,
+    rgb(248, 246, 246) 0px 0px 0px 1px;
+}
+
+.section-navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem 0;
+}
+
+.section-navbar .navbar ul {
+    display: flex;
+    gap: 2.2rem;
+    & li a {
+        color: var(--heading-color);
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.6rem;
+        display: inline-block;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -0.3rem;
+            left: 0;
+            width: 0;
+            border-bottom: 0.2rem solid var(--main-color);
+            transition: all .3sec linear;
+        }
+    }
+   & li a:hover:after {
+    width: 100%;
+   }
+}
+
+
+main {
+    position: relative;
+    background-image: linear-gradient(
+        to top right,
+        #bd9db6, 
+        #eeb2e9,
+        #e0f147,
+        #eefc9d,
+        #f3f5ea 
+     );
+    
+}
+
+.section-hero .grid {
+    align-items: center;
+    gap: 20.4rem;
+    margin-left: 90px;
+
+    & .hero-subheading {
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      font-size: 1.7rem;
+      word-spacing: 0.2rem;
+      color: var( --hero-heading-color);
+      font-weight: 700;
+    }
+
+    & .hero-heading {
+        font-size: 5.8rem;
+        line-height: 1.5;
+        font-family:'Times New Roman', Times, serif;
+        color: var(--hero-heading-color);
+        font-weight: 900;
+    }
+
+    & .hero-para {
+        color: var(--white-color);
+        margin: 2rem 0 4rem; /*space b/w upper & lower side in para*/
+    }
+}
+
+.section-hero--image img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+.section-hero .grid {
+    gap: 3.4rem;
+   }
+
+.section-about {
+    position: relative;
+    background-image: linear-gradient(
+        to top right,
+        #9df363, 
+        #fdb3e7,
+        #cdccfd,
+        #a599e5,
+        #f3f5ea 
+     );
+    
+}
+.section-about .grid{
+    gap: 6.4rem;
+}
+
+.section-about .about-div {
+    text-align: center;
+}
+
+
+/*about section*/
+.section-about img {
+    padding: 1.4rem;
+    background-color: var(--supporting-color);
+    width: 15rem;
+    height: auto;
+    border-radius: 50%;
+}
+.section-FamousISCKON img {
+    padding:0.4rem;
+    background-color: var(--supporting-color);
+    font-size: 2.4rem;
+    border-radius: 50%;
+    color: var(--hero-heading-color)
+}
+
+
+.section-FamousISCKON{
+    padding: 2rem 5rem 1rem 4rem ;
+}
+
+.section-all--avtar {
+    background-image: linear-gradient(
+        to top right,
+        hsl(4, 57%, 61%), 
+        #eca1e5,
+        #d1a6cb,
+        #a6b452,
+        #c3d477 
+     );
+}
+
+.section-all--avtar .grid {
+    gap: 5.6rem;
+}
+
+.common-text--highlight {
+    width: 6rem;
+    aspect-ratio: 1; /*box ban jaey ga 1 ke vaha*/
+    background-color: var(--supporting-color);/*color aaya haibox mai*/
+    color: var(--main-color); /*no. ka color change hoga*/
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    border-radius: 50%;
+}
+
+.choose-center--div img { /*avtaar wali photo*/
+    width: 90%;
+    height: auto;
+    border-radius: 50%;
+
+}
+
+
+.choose-center--div, figure {/*figure se photo center mai aai avtaar wali or contact wali*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-contact--homepage {
+    width: 90%;
+    min-height: 30rem;
+    margin: 0 auto;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, /*box ban jaey ga contact wle mai*/
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    margin-bottom: 4rem;
+    border-radius: 4.2rem;
+padding: 0 3.2rem;
+
+    & .grid {
+        align-items: center;
+        gap: 6.4em; /*gap aajeyga last wale box ma*/
+    }
+}
+
+.contact-title{
+    font-size: 2.8rem;
+    line-height: 1.2;
+}
+.contact-content p {
+    margin: 1.2rem 0 2.4rem 0;  /*heading ka jo space hai uska double ya triple btn ke saath dena chahuye*/
+}
+
+.section-contact--homepage a{
+    color: var(--white-color); /*start btn color*/
+    text-transform: capitlize;
+}
+
+.section-contact--homepage img {
+    width: 50%;
+    height: auto;
+    
+
+}
+
+.contact-content{
+    padding-bottom: 5rem;
+    padding-left: 5.3rem;
+    gap: 6.4rem;
+    background-image: linear-gradient(
+        to top right,
+        hsl(4, 88%, 74%), 
+        #e29623,
+        #eedf56,
+        #f7f33b,
+        #df8f6a 
+     );
+
+}
+
+
+.btn-submit {
+    font-size: 1.2rem;
+    border: none;
+    text-transform: capitalize;
+    background-color: #4d4bdfb7;
+    margin: 20px 0 40px 0;
+}
+
+
+.section-contact--homepage .btn {
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border-radius: 0.6rem;
+}
+
+
+.btn:hover {
+    background-color: var(--bnt-hover-bg-color);
+    cursor: pointer;
+    box-shadow: var(--btn-box-shadow);
+ }
+
+/*media quries mai isse neeche gaey toh size font ka xhote hone lag jaey ga*/
+@media (max-width: 1093px ){
+    html{
+        font-size: 56.25;
+    }
+}
+@media (max-width:600px){
+    .grid-two--cols,
+    .grid-three--cols,
+    .grid-four--cols {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
